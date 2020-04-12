@@ -1,25 +1,34 @@
 <?php
 /* PHP.net*/
-    $x = 214748836477777;
-    echo $x;
-    echo '<br/>';
-    echo PHP_INT_MAX;
+$A = 5;
+$b = 7;
+echo isset ($a);
+echo "<br />";
+echo isset ($b);
 
-    $d_1 = 1.5;
-    $d_2 = 9.8e5;
-    $d_3 = 9.8e-5;
-    echo "<br/>d_1 = $d_1 d_2 = $d_2 d_3 = $d_3<br/>";
+$x =15;
+echo '<br />';
+echo gettype($x);
+$x = (double) $x;
+echo '<br />';
+echo gettype($x);
 
-    $s = 'My string';
-    echo $s;
-    echo '<br />';
+$str = 'Hello';
+echo '<br />';
+echo "Переменная str - это string?";
+echo '<br />';
+echo is_string($str);
 
-    $b_0 = false;
-    $b_1 = true;// boolian
-    echo "b_0 = $b_0 b_1 = $b_1 <br />";
+echo '<br />';
 
-    $obj = null;
-    echo "obj = $obj";
+echo ((int) $str);
+echo '<br />';
+$str_number = '12345';
+$str_number =((int) $str_number);
+echo ((int) $str_number);
+echo '<br />';
+echo gettype($str_number);
+echo '<br />';
 
-    /*Array, Object, Resource, Collable будут рассмотрены позже*/
+
 ?>
