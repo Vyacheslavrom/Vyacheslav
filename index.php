@@ -1,34 +1,27 @@
 <?php
 /* PHP.net*/
-$A = 5;
-$b = 7;
-echo isset ($a);
+  //жесткие ссылки
+$a = 10;
+$b =& $a;
+$a = 5;
+echo $b;
 echo "<br />";
-echo isset ($b);
+$b = 7;
+echo $a;
+unset ($a);
+echo "<br />";
+echo $b;
+/* Символические ссылки*/
 
-$x =15;
-echo '<br />';
-echo gettype($x);
-$x = (double) $x;
-echo '<br />';
-echo gettype($x);
+$a =3;
+$b = 'a';
+echo "<br />";
+echo $$b;
+$$b = 10;
+echo "<br />";
+echo $a;
 
-$str = 'Hello';
-echo '<br />';
-echo "Переменная str - это string?";
-echo '<br />';
-echo is_string($str);
-
-echo '<br />';
-
-echo ((int) $str);
-echo '<br />';
-$str_number = '12345';
-$str_number =((int) $str_number);
-echo ((int) $str_number);
-echo '<br />';
-echo gettype($str_number);
-echo '<br />';
+/*Ссылки на обьекты* рассмотрим позже/
 
 
 ?>
