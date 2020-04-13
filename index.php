@@ -1,27 +1,16 @@
 <?php
 /* PHP.net*/
-  //жесткие ссылки
-$a = 10;
-$b =& $a;
-$a = 5;
-echo $b;
+define ('COLOR', '#c00');
+echo COLOR;
 echo "<br />";
-$b = 7;
-echo $a;
-unset ($a);
-echo "<br />";
-echo $b;
-/* Символические ссылки*/
+echo defined ('COLOR');
 
-$a =3;
-$b = 'a';
-echo "<br />";
-echo $$b;
-$$b = 10;
-echo "<br />";
-echo $a;
-
-/*Ссылки на обьекты* рассмотрим позже/
-
+/*Встроенные константы*/
+echo '<br />';
+echo __FILE__;
+echo '<br />';
+echo PHP_VERSION;
 
 ?>
+
+<P style="color: <?=COLOR?>">HELO PIPL!!!</p>
