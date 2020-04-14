@@ -1,23 +1,34 @@
 <?php
 /* PHP.net*/
-$x = 10;
-$y = 0;
-$b_1 = $x > 10;
-$b_2 = $y == 0;
-echo "x = $x; y = $y <br />";
-echo "x>10 = $b_1; b=0 = $b_2";
+$a = 5;
+$b = 3;
+ if ($a < 5) echo 'Истина';
+ else echo "Лож <br />";
+ if ($a < 5 || $b = 3) echo 'Истина';
+ else echo 'Лож';
 
-$b_1 = true;
-$b_2 = false;
-echo "<br />";
-echo "b_1 = $b_1; b_2 = $b_2 <br />";
-echo "Отрицание b_1=".!$b_1. '<br />';
-echo "Логичисгое сложение b_1 ИЛИ b_2=".($b_1 || $b_2).'<br />';
-echo "Логичисгое умножение  b_1 И b_2=".($b_1 && $b_2).'<br />';
-echo "Исключабщее или b_1 ИСКЛ ИЛИ b_2=".($b_1 xor $b_2).'<br />';
+ #if (isset($_GET['com'])) $com = $_GET['com'];
+#else $com = false;
 
-$x = 5;
-$y = '5';
-echo 'Результат проверки на равенство x и y ='.($x == $y).'<br />';
-echo 'Результат проверки на эквивалентсоть x и y ='.($x === $y).'<br />';
+#$com =isset($_GET['com'])? $_GET['com'] : false;
+
+$com = $_GET['com']?? false;
+echo "<br /><br /> $com";
+
+if ($com == 'add') { $summa = $a + $b;
+  echo "<br /> $summa";
+}
+elseif ($com == 'mult'){ $umnog = $a * $b;
+ echo "<br /> $umnog";
+}
+
+
+
 ?>
+
+<div>
+  <br />
+  <a href="?com=add">Сложить</a>
+  <a href="?com=mult">Перемножить</a>
+
+</div>
