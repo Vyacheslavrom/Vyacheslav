@@ -80,6 +80,19 @@ echo "<br />". $arr_2 ['name'];
 
   echo "<br />".$staff [2]['name'];
 
+  $arr_5 = [1, 5, 0, true, false, "Mystring", 2.5];
+    foreach ($arr_5 as $value) {
+      echo "<br />".$value;
+    }
+echo "<br />";
+  foreach ($staff as $key => $value_staff) {
+    echo $key.'-';
+    foreach ($value_staff as $k => $v){
+    echo $k .'='.$v."-";
+    }
+echo "<br />";
+  }
+
 
 
 
