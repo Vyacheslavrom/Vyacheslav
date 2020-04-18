@@ -1,12 +1,12 @@
 <?php
-echo 'Это страница wblog';
-$_ = [1=>'Страница 1',2=>'Страница 2'];
-echo print_r ($_GET).'<br /><br />';
-echo "<a href='wblog.ru/index?page=1'>Ссылка 1</a>";
-echo "<a href='wforum.ru/index?page=2'>Cсылка 2</a>";
+$_ = [2=>'страница 2',3=>'страница 3'];
+echo 'Страница wblog!';
+echo '<br /><br />';
+echo "<a href='page2.php?page=2'>Страница 2</a><br />";
+echo "<a href='page3.php?page=3'>Страница 3</a><br />";
 if(isset($_GET['page'])){
-echo $_[$_GET['page']];
+echo "<br />".$_[$_GET['page']]."<br />";
 }
 ?>
-
-?>
+<input type="button" value="<?php echo "Самая главная кнопка"; ?>"
+name="button1"/>
