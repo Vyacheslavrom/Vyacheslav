@@ -10,16 +10,9 @@ style="height: 340px; width: 800px; background-color: #00FFFF; font-size: large;
 </br>
         <p>
         <?php
-$new = 'hello11111';
-        echo "Здорова,земляне!";
-        $new = $_GET['new'];
 
-        if($new=='1'){
-        echo '1';
-        }
-        if($new=='2'){
-        echo '2';
-        }
+        echo "Здорова,земляне!";
+
         ?>
 </p>
 </br>
