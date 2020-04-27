@@ -1,7 +1,7 @@
 <?php
   get_page()->begin_header();
 
-  echo "<h1 align='center'>Название сайта</h1>";
+  echo "<p class='title'>Играй в двоем DOOBLEGAMES</p>";
 
   get_page()->end_header();
 ?>

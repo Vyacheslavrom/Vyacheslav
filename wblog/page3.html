@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Шаблон xhtml страницы, созданный на основе табличной верстки</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+  <meta name="keywords" content="html, xhtml, css, табличная верстка, макет, шаблон"/>
+  <meta name="description" content="Макет (шаблон) xhtml страницы для создания простейший информационных порталов, созданный на основе табличной верстки"/>
+  <style type="text/css">
+    body { /*Прижимаем заголовок и колонтитул вплотную к границам окна*/
+         margin: 0px;
+    }
+
+   .frame {/*Стиль таблицы-контейнера*/
+    border-left: solid 10px #eee;
+    border-right: solid 10px #eee;
+    border-collapse: collapse;
+   }
+
+   .frame th{/*Стиль заголовка таблицы-контейнера, с использованием которого оформлен заголовок (header)*/
+    border: 0px;
+    padding : 0px;
+    background: #b85454;
+    height : 100px;
+   }
+
+   .main-menu {/*Стиль элемента td таблицы-контейнера, с использованием которого оформлено главное меню (main-menu)*/
+    font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+    font-size : 16px;
+    font-weight : bold;
+    border-top: solid 10px #eee;
+    padding : 5px;
+    background: #ccc;
+    height : 50px;
+    color : #fff;
+   }
+
+   .main-menu a {/*Стиль для оформления гиперссылок главного меню*/
+	color : #fff;
+	text-decoration : none;
+   }
+
+   .main-menu a:hover {/*Стиль для оформления гиперссылок главного меню в момент, когда курсор мыши находится над ним*/
+	color : #000;
+   }
+
+   .main {/*Стиль элемента td таблицы-контейнера - основной области страницы*/
+    border-top: solid 10px #eee;
+    border-bottom: solid 10px #eee;
+    padding : 0px;
+    height : 200px;
+    font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+    font-size : 11px;
+    color : #333;
+   }
+
+   .sub-footer {/*Стиль заголовка таблицы-контейнера, с использованием которого оформлена нижняя часть страницы (sub-footer)*/
+    border-bottom: solid 10px #eee;
+    padding : 0px;
+    background: #999;
+    height : 100px;
+   }
+
+   .footer {/*Стиль заголовка таблицы-контейнера, с использованием которого оформлен нижний колонтитул (footer)*/
+    border: 0px;
+    padding : 0px;
+    background: #aaa;
+    height : 50px;
+   }
+
+  .title {/*Стиль для оформления текста заголовка*/
+	font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 20px;
+	color : #fff;
+   }
+
+  .sub-footer-text {/*Стиль для оформления текста в нижней части страницы*/
+	font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 11px;
+	color : #fff;
+   }
+
+  .copyright {/*Стиль для вывода информации об авторском праве*/
+	font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 10px;
+	color : #fff;
+        text-align : center;
+   }
+
+   .main-table {/*Стиль таблицы-контейнера основной области*/
+    width : 100%;
+    height : 100%;
+    border : 0px;
+    border-collapse: collapse;
+   }
+
+   .side-bar-left {/*Стиль элемента td таблицы main-table для оформления левой части основной области (left-side-bar)*/
+    border-right: solid 10px #eee;
+    background: #eee;
+    width : 200px;
+    vertical-align : top;
+   }
+
+   .side-bar-right {/*Стиль элемента td таблицы main-table для оформления правой части основной области (right-side-bar)*/
+    border-left: solid 10px #eee;
+    background: #eee;
+    width : 200px;
+    vertical-align : top;
+   }
+
+   .main-bar {/*Стиль элемента td таблицы main-table для оформления центральной части основной области (main-bar)*/
+    background: #eee;
+    vertical-align : top;
+   }
+
+   .side-bar-div {/*Стиль элемента div для создания разделов в левой и правой частиях основной области страницы*/
+    background: #ddd;
+    border: solid 1px #ccc;
+    margin:0px 0px 10px 0px;
+    padding:10px;
+   }
+
+   .notice-div {/*Стиль элемента div для создания разделов-анонсов в центральной части основной области страницы*/
+    background: #fff;
+    border: solid 2px #ddd;
+    margin:0px 0px 10px 0px;
+    padding:10px;
+   }
+  </style>
+ </head>
+ <body>
+  <table align='center' class='frame' width='900px'>
+   <tr><th><p class='title'>Макет (шаблон) xhtml страницы, созданный на основе табличной верстки с фиксированным размером</p></th></tr>
+   <tr><td class='main-menu'><a href='#1'>НОВОСТИ</a> <a href='#2'>ФОРУМ</a> <a href='#3'>ГОЛОСОВАНИЯ</a> <a href='#4'>ИНТЕРВЬЮ</a> <a href='http://codingcraft.ru/html_xhtml_css.php' target='_blank'>HTML, XHTML и CSS</a> <a href='http://codingcraft.ru/web-design/templates.php' target='_blank'>ВЕБ-ДИЗАЙН</a></td></tr>
+   <tr><td class='main'>
+    <table class='main-table'><tr>
+     <td class='side-bar-left'>
+      <div class='side-bar-div'><b><u>Новости</u></b>
+       <p>Здесь можно размещать ссылки на упоминание последних и наиболее значимых событий.</p>
+      </div>
+      <div class='side-bar-div'><b><u>Интервью</u></b>
+       <p>Место для размещения ссылок на различные интервью и выступления.</p>
+      </div>
+      <div class='side-bar-div'><b><u>Опросы</u></b>
+       <p>Возможность поучаствовать в on-line голосовании и посмотреть сатистику.</p>
+      </div>
+     </td>
+     <td class='main-bar'>
+      <div class='notice-div'><h1>Описание макета html страницы</h1>
+       <p>Данный макет html страницы создан на основе <em>табличной верстки</em>. Макет состоит из пяти основных разделов: заголовка страницы (header), раздела главного меню (main-menu), основной области (main), нижней части (sub-footer) и нижнего колонтитула (footer). Макет является статичным, поскольку размер основной области не зависит от размера окна браузера. Динамически меняет свой размер только область с текстом выбранного раздела. Основная область (main) также поделена на три части: левая колонка (left-side-bar), правая колонка (right-side-bar) и главная колонка (main-bar). Таким образом, перед вами шаблон html страницы с тремя колонками с фиксированным размером. Чтобы растянуть размер страницы на всю ширину экрана достаточно убрать атрибут width из корневой таблицы, для которой определен класс frame.</p><p>На самом деле, этот макет не является результатом чисто табличной верстки, поскольку для создания разделов слева и справа основной области используются элементы DIV верстки. Все основные настройки стилей вынесены во внедренные в xhtml документ каскадные таблицы стилей CSS. Познакомиться с деталями html разметки и CSS настроек можно в окне любого браузера, открыв исходный код данной страницы. Этот макет является базовым, на основе которого в дальнейшем будут создаваться более сложные варианты шаблонов интернет страниц.
+       </p>
+      </div>
+      <div class='notice-div'>Анонс 1</div>
+      <div class='notice-div'>Анонс 2</div>
+      <div class='notice-div'>Анонс 3</div>
+      <div class='notice-div'>Анонс 4</div>
+     </td>
+     <td class='side-bar-right'>
+      <div class='side-bar-div'><b><u>Последние публикации</u></b>
+       <p>Ссылка на последние публикации, размещенные на ресурсе.</p>
+      </div>
+      <div class='side-bar-div'><b><u>Реклама</u></b>
+       <p>Здесь уместно разместить рекламный баннер или блок контекстной рекламы.</p>
+      </div>
+      <div class='side-bar-div'><b><u>Регистрация</u></b>
+       <p>Регистрация посетителей сайта для возможности участия их в обсуждении материалов, размещенных на сайте, а также, для участия в голосованиях, опросах и т.д.</p>
+      </div>
+     </td>
+    </tr></table>
+   </td></tr>
+   <tr><td class='sub-footer'><p class='sub-footer-text'>Здесь может размещаться статистика посещений, контактная информация, ссылки по теме, рекламные баннеры и т.п.</p></td></tr>
+   <tr><td class='footer'><p class='copyright'>Учебные материалы сайта <a href='http://codingcraft.ru' target='_blank'>codingcraft.ru</a>. Все права защищены © 2012</p></td></tr>
+  </table>
+ </body>
+</html>

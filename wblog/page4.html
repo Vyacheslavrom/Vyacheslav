@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Шаблон xhtml страницы, созданный на основе DIV верстки</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+  <meta name="keywords" content="html, xhtml, css, div верстка, макет, шаблон"/>
+  <meta name="description" content="Макет (шаблон) xhtml страницы для создания простейший информационных порталов, созданный на основе DIV верстки"/>
+  <style type="text/css">
+* {/*Отспуты для всех элементов по умолчанию нулевые*/
+      margin: 0;
+      padding: 0;
+}
+
+html, body { /*Высота страницы максимальная*/
+          height: 100%;
+}
+
+.frame { /*Основная область страницы*/
+	  background-color : #d41313;
+          border-left : 10px solid #eee;
+          border-right : 10px solid #eee;
+          min-height: 100%; /*Растягиваем элемент на всю высоту*/
+          margin : auto; /*Выравнивание по ширине*/
+          width : 894px; /*Ширина основной области*/
+}
+
+* html .frame { /*Инструкция для Internet Explorer, который может не обрабатывать свойство min-height*/
+          height: 100%;
+}
+
+.footer-proxy { /*Заглушка для нижней части, резервирующая элементу footer место*/
+	  height: 100px; /*должна быть равна высоте элемента footer*/
+          clear : both; /*Блок ниже всех плавающих блоков*/
+}
+
+.footer { /*нижняя часть (footer)*/
+	  border : 1px solid #ccc;
+          background: #ddd;
+          height: 100px;
+          margin-top: -100px; /*Перемещаем нижнюю часть поверх заглушки footer-proxy*/
+          clear : both; /*Блок ниже всех плавающих блоков*/
+}
+
+.header { /*верхняя часть (header)*/
+	  border : 1px solid #e3e716;
+          border-bottom : none;
+          background: #d2b413;
+          height: 100px;
+}
+
+.main-menu {/*Стиль div главного меню (main-menu)*/
+          font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+          font-size : 12px;
+          font-weight : bold;
+	  border : 0px;
+	  background-color : #ccc;
+	  height : 20px;
+}
+
+.main-menu-item {/*Стиль div пункта главного меню (main-menu-item)*/
+	  background-color : #ccc;
+          padding : 1px;
+          margin-right : 1px;
+	  height : 18px;
+	  float: left;
+}
+
+.main-menu a {/*Стиль для оформления гиперссылок главного меню*/
+	color : #fff;
+	text-decoration : none;
+}
+
+.main-menu a:hover {/*Стиль для оформления текущей гиперссылки главного меню*/
+	color : #333;
+	text-decoration : underline;
+}
+
+.main {/*Стиль div основной области (main)*/
+	  border : 0px;
+          clear : both;
+}
+
+.title {/*Стиль для оформления текста заголовка*/
+	  font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	  font-size : 20px;
+	  color : #fff;
+          text-align : center;
+}
+
+.copyright {/*Стиль для вывода информации об авторском праве*/
+	  font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	  font-size : 11px;
+	  color : #111;
+          text-align : center;
+}
+
+.main-side-left {/*Стиль div левой части основной области*/
+          border : 0px;
+ 	  margin : 0px;
+          float : left; /*Плавающий блок, сдвигающийся влево*/
+          width : 200px;
+}
+
+.main-side-right {/*Стиль div правой части основной области*/
+	  border : 0px;
+ 	  margin : 0px;
+          float : right; /*Плавающий блок, сдвигающийся справо*/
+          width : 200px;
+}
+
+.main-side-center {/*Стиль div центральной части основной области*/
+	  border : 0px;
+ 	  margin-left  : 210px; /*Отступ от плавающего блока слева*/
+ 	  margin-right : 200px; /*Отступ от плавающего блока справа меньше, поскольку информационные блоки внутри main-side-center имеют свой отступ справа*/
+          clear : none; /*Не размещать элемент ниже плавающих блоков*/
+}
+
+.main-content-block {
+	  font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	  font-size : 11px;
+	  color : #333;
+	  border : 1px solid #ccc;
+	  background-color : #fff;
+ 	  margin-right : 10px;
+ 	  margin-top : 10px;
+          padding : 10px;
+          float  : left; /*Плавающий блок, сдвигающийся влево*/
+          width  : 210px;
+          height : 180px;
+}
+
+.left-side-content-block {
+	  font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	  font-size : 10px;
+	  color : #111;
+	  border : 1px solid #ccc;
+	  background-color : #ddd;
+ 	  margin-top : 10px;
+          float : left; /*Плавающий блок, сдвигающийся влево*/
+          padding : 10px;
+          width  : 180px;
+}
+
+.right-side-content-block {
+	  font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	  font-size : 10px;
+	  color : #111;
+	  border : 1px solid #ccc;
+	  background-color : #ddd;
+ 	  margin-top : 10px;
+          float : right; /*Плавающий блок, сдвигающийся справо*/
+          padding : 10px;
+          width  : 180px;
+}
+
+h1 {
+	  font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	  font-size : 14px;
+	  color : #777;
+}
+
+ </style>
+ </head>
+ <body>
+  <div class="frame">
+   <div class="header"><p class='title'>Макет (шаблон) xhtml страницы, созданный на основе div верстки с тремя колонками и колонтитулом (footer), прижатым к нижней части окна браузера</p></div>
+   <div class="main-menu">
+    <div class='main-menu-item'><a href='http://codingcraft.ru'>ГЛАВНАЯ</a></div>
+    <div class='main-menu-item'><a href='http://codingcraft.ru/web-design/templates.php'>ВЕБ-ДИЗАЙН</a></div>
+    <div class='main-menu-item'><a href='http://codingcraft.ru/html_xhtml_css.php'>XHTML</a></div>
+    <div class='main-menu-item'><a href='http://codingcraft.ru/computer_courses.php'>ОБУЧЕНИЕ</a></div>
+    <div class='main-menu-item'><a href='http://codingcraft.ru/open_source.php'>ПРОЕКТЫ</a></div>
+   </div>
+   <div class="main">
+    <div class="main-side-left">
+     <div class='left-side-content-block'><b><u>Анонсы</u></b>
+       <p>Здесь можно размещать анонсы будущих статей, обзоров и учебных материалов.</p></div>
+     <div class='left-side-content-block'><b><u>Ссылки</u></b>
+       <p>Место для размещения ссылок на ресурсы схожей тематики.</p></div>
+     <div class='left-side-content-block'><b><u>Форум</u></b>
+       <p>Возможность поучаствовать в on-line обсуждении вопросов, касающихся тематики ресурса.</p></div>
+    </div>
+    <div class="main-side-right">
+     <div class='right-side-content-block'><b><u>Новости</u></b>
+       <p>Новости, связанные с жизнью сайта и его авторов. </p></div>
+     <div class='right-side-content-block'><b><u>Последние публикации</u></b>
+       <p>Ссылка на последние публикации, размещенные на ресурсе.</p></div>
+     <div class='right-side-content-block'><b><u>Реклама</u></b>
+       <p>Здесь уместно разместить рекламный баннер или блок контекстной рекламы.</p></div>
+    </div>
+    <div class="main-side-center">
+     <div class='main-content-block'><h1>Описание макета html страницы</h1><hr/><br/>
+      <p>Макет создан на основе так называемой DIV верстки, когда страница разбивается на области не средствами элементов таблицы (table, tr, th, td) а с использованием блочного тэга DIV.</p><br/>
+      <p>Этот подход более гибкий, но и менее тривиальный, чем <a href='http://codingcraft.ru/resources/HTML/templates/table_page.xhtml'>табличная верстка</a>...</p>
+     </div>
+     <div class='main-content-block'><h1>Верстка html страницы</h1><hr/><br/>
+      <p>Перед тем, как отрыть исходный код этой страницы, изучите материал статьи о стандартах XHTML, HTML и CSS, размещенных <a href='http://codingcraft.ru/html_xhtml_css.php'>здесь</a>.</p>
+     </div>
+     <div class='main-content-block'><h1>Примеры веб-дизайна</h1><hr/><br/>
+      <p>Другие примеры html верстки и прочие приемы веб-дизайна вы можете найти на сайте <a href='http://codingcraft.ru'>codingcraft.ru</a> в разделе <a href='http://codingcraft.ru/web-design/templates.php'>основы веб-дизайна</a>.</p>
+     </div>
+     <div class='main-content-block'><h1>Особенности DIV верстки</h1><hr/><br/>
+      <p>Особенности DIV верстки заключаются в управлении взаимным расположением плавающих и блочных элементов DIV, которое организуется с помощью свойств float и clear.</p><br/>
+      <p>Исходный <i>html код</i> содержит все необходимые комментарии.</p>
+     </div>
+     <div class='main-content-block'><h1>Блок footer</h1><hr/><br/>
+      <p>В данном примере разметка организованна таким образом, что блок footer (колонтитул) будет прижат к низу окна браузера, даже если убрать все анонсы из основной области. Детали реализации такого поведения также описаны в комментариях к <a href='http://codingcraft.ru/html_xhtml_css.php#css'>CSS</a> настройкам элементов (см. исходный код страницы).</p><br/>
+     </div>
+    </div>
+   </div>
+   <div class="footer-proxy"></div>
+  </div>
+  <div class="footer"><p class='copyright'>Учебные материалы сайта <a href='http://codingcraft.ru' target='_blank'>codingcraft.ru</a>. Все права защищены © 2012</p></div>
+ </body>
+</html>

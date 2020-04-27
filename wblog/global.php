@@ -71,6 +71,7 @@
    public function end_header()
    {
      echo "</div>\n";
+     include "mainmenu.html";
      echo "<div class='main'>\n";
    }
 
