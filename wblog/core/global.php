@@ -51,7 +51,7 @@
      echo "<meta http-equiv='Content-Type' content='text/html; charset=windows-1251'>\n";
      echo "<meta name='description' content='".$this->_description."'>\n";
      echo "<meta name='keywords' content='".$this->_keywords."'>\n";
-     echo "<link rel='stylesheet' href='styles.css' type='text/css'>\n";
+     echo "<link rel='stylesheet' href='css/styles.css' type='text/css'>\n";
      echo "</head>\n";
      echo "<body>\n";
    }
@@ -71,7 +71,8 @@
    public function end_header()
    {
      echo "</div>\n";
-     include "mainmenu.html";
+     include "core/main_menu.html";
+     include "core/rec.html";
      echo "<div class='main'>\n";
    }
 

@@ -1,0 +1,11 @@
+
+
+
+    <a href='?game=1'><img class='menu-v' src="./im/kisa.jpeg" border="2" /></a>
+  	<a href='?game=2'><img class='menu-v' src="./im/kisa.jpeg" border="2" /></a>
+  	<a href="?game=3"><img class='menu-v' src="./im/kisa.jpeg" border="2" /></a>
+    <a href="4.html"><img class='menu-v' src="./im/kisa.jpeg" border="2" /></a>
+    <a href="5.html"><img class='menu-v' src="./im/kisa.jpeg" border="2" /></a>
+
+
+    <!--echo "<a href='page3.php?page=3'>Страница 3</a><br />";-->
