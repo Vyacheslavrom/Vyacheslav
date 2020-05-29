@@ -12,9 +12,9 @@
     $email  = $user->email;
 		$id  = $user->id;
 		include "./core/send_email.php";
-		$pass_new = substr(str_shuffle('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 7);
-		echo send_email ("$email", "$pass_new");
-		$pass = R::load('users', $id);
+		$pass_new = substr(str_shuffle('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 7);?>
+		<div class ='login_text' > <?= send_email ("$email","$pass_new")?> </div><br/>
+		<?php $pass = R::load('users', $id);
 		$pass->password = password_hash($pass_new, PASSWORD_DEFAULT);
 		R::store($pass);
      // получаем email из базы
@@ -28,9 +28,9 @@
     $email_1  = $user_1->email;
 		$id  = $user_1->id;
 		include "./core/send_email.php";
-		$pass_new = substr(str_shuffle('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 7);
-		echo send_email ("$email_1","$pass_new").'<br/>';
-		$pass = R::load('users', $id);
+		$pass_new = substr(str_shuffle('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 7);?>
+		<div class ='login_text' > <?= send_email ("$email_1","$pass_new")?> </div><br/>
+	<?php	$pass = R::load('users', $id);
     $pass->password = password_hash($pass_new, PASSWORD_DEFAULT);
     R::store($pass);
 

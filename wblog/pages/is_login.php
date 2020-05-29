@@ -2,7 +2,7 @@
 <?php
 
   $data_1 = $_POST;
-if ( !isset($data_1['login1']) && !isset($data_1['do_login']) && !isset($data_1['do_signup'])&& !isset($data_1['send']) ){
+if ( !isset($data_1['login1']) && !isset($data_1['do_login']) && !isset($data_1['do_signup']) && !isset($data_1['send'])){
 
       require './core/authorization_php/db.php';
 }
@@ -19,8 +19,9 @@ if ( !isset($data_1['login1']) && !isset($data_1['do_login']) && !isset($data_1[
 
   <form method="POST">
   <button class = "login_text" type="submit" name="login1" value="logout">Выйти</button>
-  <button class = "login_text" type="submit" name="login1" value="repass">сменить пароль</button>
+  <button class = "login_text" type="submit" name="login2" value="repass">Сменить пароль</button>
   </form>
+
 
 <?php else : ?>
 <div class = "login_text">Вы не авторизованы</div> <br/>
@@ -33,11 +34,7 @@ if ( !isset($data_1['login1']) && !isset($data_1['do_login']) && !isset($data_1[
 </form>
 <?php endif; ?>
 <?php
-
-
-
-
-
+$data_1 = $_POST;
   if ( isset($data_1['login1'])){
     //print_r ($data_1);
 
@@ -55,9 +52,8 @@ if ( !isset($data_1['login1']) && !isset($data_1['do_login']) && !isset($data_1[
         case 'send_password':
         require './core/authorization_php/send_password.php';// code...
         break;
-        case 'repass':
-        require './core/authorization_php/repass.php';// code...
-        break;
+
+
 
       default:
        // code...
@@ -65,7 +61,12 @@ if ( !isset($data_1['login1']) && !isset($data_1['do_login']) && !isset($data_1[
     }
 
   }
-
+  if (isset($data_1['login2'])){ if ($data_1['login2'] == 'repass'){
+          $action = 'no';
+          require './core/authorization_php/repass.php';
+          // code...
+    
+}}
 
   if ( isset($data_1['do_login']) && !isset ($_SESSION['logged_user']) ){
 
@@ -75,11 +76,11 @@ if ( !isset($data_1['login1']) && !isset($data_1['do_login']) && !isset($data_1[
 
         require './core/authorization_php/signup.php';// code...
 }
-if ( isset($data_1['send']) && !isset ($_SESSION['logged_user']) ){
+   if ( isset($data_1['send']) && !isset ($_SESSION['logged_user']) ){
 
      require './core/authorization_php/send_password.php';// code...
 }
-if ( isset ($data_1['send_password']) ){
+    if (isset ($data_1['send_repass'])) {
 
      require './core/authorization_php/repass.php';// code...
 }
